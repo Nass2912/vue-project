@@ -1,7 +1,7 @@
 
 <template>
   <h3>Hey!</h3>
-  <greet :greetage="age" @updateFromGreet="updateAge" ></greet>
+  <greet :greetage="age" @updateFromGreet="updateFromGreetFn" ></greet>
   <user :age="age" :caravab="car" @age-change="updateAge" ></user>
 </template>
 
@@ -26,6 +26,10 @@ import  User  from './components/User.vue'
     methods: {
       updateAge (num) {
         this.age += num 
+      },
+
+      updateFromGreetFn () {
+        this.age ++
       }
     }
   }

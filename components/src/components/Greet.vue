@@ -21,7 +21,7 @@
 
     methods: {
         updateAgeGreet () {
-            this.$emit('updateFromGreet', 3)
+            this.$emit('updateFromGreet')
         }
     },
 

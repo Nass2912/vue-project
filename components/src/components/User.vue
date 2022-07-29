@@ -9,7 +9,18 @@
 <script>
 export default {
     name: "User",
-    props: ["age", "caravab"],
+    props: {
+        age: {
+            type: Number,
+            required: true
+        },
+
+        caravab: {
+            type: String,
+            required: true
+        }
+    },
+
     emits: ['age-change'],
     methods: {
         onClickAge () {
